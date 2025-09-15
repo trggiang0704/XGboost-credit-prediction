@@ -48,10 +48,10 @@ Kết quả hiển thị:
 ## 🎨 Giao diện
 
 🔹 Form nhập dữ liệu khách hàng:
-(Ảnh minh họa có thể chụp màn hình app của bạn và chèn vào đây)
+<img width="1474" height="627" alt="image" src="https://github.com/user-attachments/assets/f13b3d56-4014-48ae-ba09-0bed5318fbc2" />
 
 🔹 Kết quả dự đoán:
-(Ảnh kết quả dự đoán hiển thị “Default / Non-default”)
+<img width="1402" height="756" alt="image" src="https://github.com/user-attachments/assets/e9b869a9-8692-4230-9e00-dc3729350421" />
 
 ## 📂 Cấu trúc dự án
 ```bash
