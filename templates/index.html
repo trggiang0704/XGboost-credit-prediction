@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Scoring App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container py-5">
+  <h2 class="mb-4 text-center">Credit Scoring Prediction</h2>
+
+  <form method="POST" class="row g-3">
+    <!-- 1 -->
+    <div class="col-md-6">
+      <label class="form-label">RevolvingUtilizationOfUnsecuredLines (Tỷ lệ sử dụng hạn mức tín dụng không đảm bảo)</label>
+      <input type="number" step="any" name="RevolvingUtilizationOfUnsecuredLines" class="form-control" required>
+    </div>
+    <!-- 2 -->
+    <div class="col-md-6">
+      <label class="form-label">age (Tuổi)</label>
+      <input type="number" step="any" name="age" class="form-control" required>
+    </div>
+    <!-- 3 -->
+    <div class="col-md-6">
+      <label class="form-label">NumberOfTime30-59DaysPastDueNotWorse (Số lần trễ hạn 30–59 ngày)</label>
+      <input type="number" step="any" name="NumberOfTime30-59DaysPastDueNotWorse" class="form-control" required>
+    </div>
+    <!-- 4 -->
+    <div class="col-md-6">
+      <label class="form-label">DebtRatio (Tỷ lệ nợ)</label>
+      <input type="number" step="any" name="DebtRatio" class="form-control" required>
+    </div>
+    <!-- 5 -->
+    <div class="col-md-6">
+      <label class="form-label">MonthlyIncome (Thu nhập hàng tháng)</label>
+      <input type="number" step="any" name="MonthlyIncome" class="form-control" required>
+    </div>
+    <!-- 6 -->
+    <div class="col-md-6">
+      <label class="form-label">NumberOfOpenCreditLinesAndLoans (Số khoản vay & tín dụng đang mở)</label>
+      <input type="number" step="any" name="NumberOfOpenCreditLinesAndLoans" class="form-control" required>
+    </div>
+    <!-- 7 -->
+    <div class="col-md-6">
+      <label class="form-label">NumberOfTimes90DaysLate (Số lần trễ hạn ≥ 90 ngày)</label>
+      <input type="number" step="any" name="NumberOfTimes90DaysLate" class="form-control" required>
+    </div>
+    <!-- 8 -->
+    <div class="col-md-6">
+      <label class="form-label">NumberRealEstateLoansOrLines (Số khoản vay/hạn mức bất động sản)</label>
+      <input type="number" step="any" name="NumberRealEstateLoansOrLines" class="form-control" required>
+    </div>
+    <!-- 9 -->
+    <div class="col-md-6">
+      <label class="form-label">NumberOfTime60-89DaysPastDueNotWorse (Số lần trễ hạn 60–89 ngày)</label>
+      <input type="number" step="any" name="NumberOfTime60-89DaysPastDueNotWorse" class="form-control" required>
+    </div>
+    <!-- 10 -->
+    <div class="col-md-6">
+      <label class="form-label">NumberOfDependents (Số người phụ thuộc)</label>
+      <input type="number" step="any" name="NumberOfDependents" class="form-control" required>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary w-100">Predict</button>
+    </div>
+  </form>
+
+  {% if result %}
+  <div class="alert alert-info mt-4">
+    <p><strong>Prediction:</strong> {{ result.prediction }}</p>
+    <p><strong>Probability of Default:</strong> {{ '%.2f'|format(result.probability) }}</p>
+  </div>
+  {% endif %}
+</div>
+</body>
+</html>
