@@ -65,24 +65,12 @@ credit_prediction/
 
 ## 🚀 Khởi chạy ứng dụng
 ```bash
-1. Tạo môi trường ảo
-python -m venv .venv
-
-2. Kích hoạt môi trường ảo
-Windows:
-.venv\Scripts\activate
-macOS/Linux:
-source .venv/bin/activate
-
-3. Cài đặt thư viện
-pip install -r requirements.txt
-
-4. Huấn luyện mô hình
+1. Huấn luyện mô hình
 python train.py
 
-5. Chạy ứng dụng Flask
+2. Chạy ứng dụng Flask
 python app.py
 
-6. Mở trình duyệt
+3. Mở trình duyệt
 http://127.0.0.1:5000
 ```
